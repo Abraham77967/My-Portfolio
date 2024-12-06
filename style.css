@@ -1,23 +1,30 @@
-/* Navbar Styling */
-.navbar {
+/* Glowing Edges Effect for Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #5d90d4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #5d90d4; /* Updated color */
-    color: #fff;
-    padding: 15px 20px; /* Ensures consistent height */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0 transparent; /* No glow initially */
 }
 
-.navbar .nav-links {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 20px;
+.nav-button:hover {
+    background-color: #4878b0;
+    box-shadow: 0 0 10px #5d90d4, 0 0 20px #5d90d4, 0 0 30px #5d90d4;
+    animation: glow 1.5s infinite alternate;
 }
 
+/* Glowing Effect for Navbar Links */
 .navbar .nav-links a {
     color: #fff;
     text-decoration: none;
@@ -29,4 +36,16 @@
 
 .navbar .nav-links a:hover {
     border-color: #fff;
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #5d90d4;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #5d90d4, 0 0 20px #5d90d4, 0 0 30px #5d90d4;
+    }
+    100% {
+        box-shadow: 0 0 15px #5d90d4, 0 0 30px #5d90d4, 0 0 45px #5d90d4;
+    }
 }
