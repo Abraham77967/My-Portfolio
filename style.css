@@ -141,3 +141,13 @@ footer {
     box-shadow: 0 0 10px #5d90d4, 0 0 20px #5d90d4, 0 0 30px #5d90d4;
     animation: glow 1.5s infinite alternate;
 }
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #5d90d4, 0 0 20px #5d90d4, 0 0 30px #5d90d4;
+    }
+    100% {
+        box-shadow: 0 0 15px #5d90d4, 0 0 30px #5d90d4, 0 0 45px #5d90d4;
+    }
+}

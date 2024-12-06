@@ -22,12 +22,58 @@
     <main>
         <section class="section">
             <h1>Projects</h1>
-            <p>Details of my projects will be listed here.</p>
+            <div class="card-container">
+                <!-- Left Navigation Button -->
+                <button class="nav-button left" onclick="navigateCards(-1)">&#8249;</button>
+                
+                <!-- Card Stack -->
+                <div class="card-stack" id="card-stack">
+                    <div class="card">
+                        <h3>Project 1</h3>
+                        <p>Description of the first project, highlighting its purpose and impact.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project 2</h3>
+                        <p>Description of the second project, showcasing the tools and skills used.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project 3</h3>
+                        <p>Details about the third project, emphasizing challenges and solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Right Navigation Button -->
+                <button class="nav-button right" onclick="navigateCards(1)">&#8250;</button>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Abraham Guo</p>
     </footer>
+
+    <script>
+        // JavaScript to navigate the stack of cards
+        let currentIndex = 0;
+
+        function navigateCards(direction) {
+            const cardStack = document.getElementById('card-stack');
+            const totalCards = cardStack.children.length;
+
+            // Update the current index
+            currentIndex += direction;
+
+            // Loop back to the beginning or end if out of bounds
+            if (currentIndex < 0) {
+                currentIndex = totalCards - 1;
+            } else if (currentIndex >= totalCards) {
+                currentIndex = 0;
+            }
+
+            // Calculate the offset and move the card stack
+            const offset = -currentIndex * 100; // 100% width for each card
+            cardStack.style.transform = `translateX(${offset}%)`;
+        }
+    </script>
 </body>
 </html>
