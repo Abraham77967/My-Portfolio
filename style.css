@@ -80,6 +80,7 @@ footer {
     margin: 50px auto;
     max-width: 800px;
     overflow: hidden;
+    padding: 0 60px; /* Add padding to account for navigation buttons */
 }
 
 .card-stack {
@@ -112,7 +113,7 @@ footer {
 /* Navigation Buttons */
 .nav-button {
     position: absolute;
-    top: 50%;
+    top: 50%; /* Center vertically */
     transform: translateY(-50%);
     background-color: #5d90d4;
     color: white;
@@ -126,14 +127,15 @@ footer {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    z-index: 10; /* Ensure it’s above other elements */
 }
 
 .nav-button.left {
-    left: 10px;
+    left: -60px; /* Move left arrow further out */
 }
 
 .nav-button.right {
-    right: 10px;
+    right: -60px; /* Move right arrow further out */
 }
 
 .nav-button:hover {
