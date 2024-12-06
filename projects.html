@@ -6,6 +6,47 @@
     <title>Projects - Abraham Guo</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* General Styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0047ab;
+            color: #fff;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar .nav-links a:hover {
+            border-color: #fff;
+        }
+
         /* Stack of Cards Styling */
         .card-container {
             position: relative;
@@ -29,6 +70,7 @@
             padding: 20px;
             text-align: center;
             color: #333;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card h3 {
@@ -40,6 +82,11 @@
             margin-bottom: 10px;
         }
 
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
         /* Navigation Buttons */
         .nav-button {
             position: absolute;
@@ -49,13 +96,15 @@
             color: white;
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: all 0.3s ease-in-out;
+            border: 2px solid transparent;
         }
 
         .nav-button.left {
@@ -68,13 +117,13 @@
 
         .nav-button:hover {
             background-color: #003580;
+            border-color: #fff;
         }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Abraham Guo</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
