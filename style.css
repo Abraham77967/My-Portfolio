@@ -111,6 +111,7 @@ footer {
 }
 
 /* Navigation Buttons */
+/* Navigation Buttons */
 .nav-button {
     position: absolute;
     top: 50%; /* Center vertically relative to the card-container */
@@ -119,28 +120,30 @@ footer {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 28px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
     z-index: 1000; /* Ensure buttons are above the card stack */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a 3D shadow effect */
+    border: 2px solid #fff; /* Subtle border for a polished look */
 }
 
 .nav-button.left {
-    left: 20px; /* Position left button */
+    left: -70px; /* Move left button further left */
 }
 
 .nav-button.right {
-    right: 20px; /* Position right button */
+    right: -70px; /* Move right button further right */
 }
 
 .nav-button:hover {
     background-color: #4878b0;
-    box-shadow: 0 0 10px #5d90d4, 0 0 20px #5d90d4, 0 0 30px #5d90d4;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* Make the shadow more pronounced on hover */
     animation: glow 1.5s infinite alternate;
 }
 
