@@ -73,7 +73,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Stack of Cards Styling */
+/* Card Container Styling */
 .card-container {
     position: relative;
     width: 80%;
@@ -83,11 +83,13 @@ footer {
     padding: 0; /* Remove padding to ensure buttons are positioned correctly */
 }
 
+/* Card Stack Styling */
 .card-stack {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
+/* Card Styling */
 .card {
     min-width: 100%;
     flex-shrink: 0;
@@ -110,10 +112,7 @@ footer {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Buttons */
-/* Navigation Buttons */
-/* Navigation Buttons */
-/* Navigation Buttons */
+/* Navigation Buttons Styling */
 .nav-button {
     position: absolute;
     top: 50%; /* Center vertically relative to the card-container */
@@ -144,17 +143,8 @@ footer {
 
 .nav-button:hover {
     background-color: #4878b0;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
 }
-
-
-
-/* Card Stack Styling */
-.card-stack {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
 
 /* Glow Animation */
 @keyframes glow {
