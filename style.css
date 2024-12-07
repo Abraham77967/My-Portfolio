@@ -97,7 +97,6 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    margin: 0; /* No extra spacing between cards */
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -113,37 +112,35 @@ footer {
 }
 
 /* Navigation Buttons */
-/* Navigation Buttons */
-/* Navigation Buttons */
 .nav-button {
     position: absolute;
-    top: 50%; /* Center vertically within the container */
+    top: 50%;
     transform: translateY(-50%);
     background-color: #5d90d4;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease-in-out;
-    z-index: 10; /* Keeps buttons above cards */
+    z-index: 10; /* Ensures buttons are above other elements */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button.left {
-    left: -60px; /* Move the button outside the left edge */
+    left: -80px; /* Positioned outside the card container */
 }
 
 .nav-button.right {
-    right: -60px; /* Move the button outside the right edge */
+    right: -80px; /* Positioned outside the card container */
 }
 
 .nav-button:hover {
-    background-color: #4878b0;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    color: #5d90d4;
+    border: 2px solid #5d90d4;
 }
