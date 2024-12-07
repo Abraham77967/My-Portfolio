@@ -94,7 +94,7 @@ footer {
     background-color: #f4f4f4;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 30px;
     text-align: center;
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -113,6 +113,7 @@ footer {
 /* Navigation Buttons */
 /* Navigation Buttons */
 /* Navigation Buttons */
+/* Navigation Buttons */
 .nav-button {
     position: absolute;
     top: 50%; /* Center vertically relative to the card-container */
@@ -121,30 +122,31 @@ footer {
     color: white;
     border: none;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 50px; /* Reduced size */
+    height: 50px; /* Reduced size */
     cursor: pointer;
-    font-size: 28px;
+    font-size: 24px; /* Adjusted font size */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
     z-index: 1000; /* Ensure buttons are above the card stack */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a 3D shadow effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button.left {
-    left: 10px; /* Adjust closer to the container */
+    left: -60px; /* Move left button farther outside the container */
 }
 
 .nav-button.right {
-    right: 10px; /* Adjust closer to the container */
+    right: -60px; /* Move right button farther outside the container */
 }
 
 .nav-button:hover {
     background-color: #4878b0;
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3); /* Make the shadow more pronounced on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 /* Card Stack Styling */
 .card-stack {
