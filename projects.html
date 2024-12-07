@@ -3,78 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abraham Guo - Projects</title>
+    <title>Projects - Abraham Guo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <::: logo
-        Abraham Guo
-        :::
+    <header>
+        <nav class="navbar">
+            <div class="logo">Abraham Guo</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="internships.html">Internships</a></li>
+                <li><a href="education.html">Education</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        -   [Home](index.html)
-        -   [Projects](projects.html)
-        -   [Internships](internships.html)
-        -   [Education](education.html)
-    </div>
+    <main>
+        <section class="section">
+            <h1>Projects</h1>
+            <div class="card-container">
+                <!-- Left Navigation Button -->
+                <button class="nav-button left" onclick="navigateCards(-1)">&#8249;</button>
+                
+                <!-- Card Stack -->
+                <div class="card-stack" id="card-stack">
+                    <div class="card">
+                        <h3>Project 1</h3>
+                        <p>Description of the first project, highlighting its purpose and impact.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project 2</h3>
+                        <p>Description of the second project, showcasing the tools and skills used.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Project 3</h3>
+                        <p>Details about the third project, emphasizing challenges and solutions.</p>
+                    </div>
+                </div>
 
-    <:::: {role="main"}
-    ::: {.section .section}
-    # Projects
+                <!-- Right Navigation Button -->
+                <button class="nav-button right" onclick="navigateCards(1)">&#8250;</button>
+            </div>
+        </section>
+    </main>
 
-    ::::::: card-container
-    › 
-
-    :::::: {#card-stack .card-stack}
-    ::: card
-    ### Project 1
-
-    Description of the first project, highlighting its purpose and impact.
-    :::
-
-    ::: card
-    ### Project 2
-
-    Description of the second project, showcasing the tools and skills used.
-    :::
-
-    ::: card
-    ### Project 3
-
-    Details about the third project, emphasizing challenges and solutions.
-    :::
-    ::::::
-
-    <button class="nav-button left" onclick="navigateCards(-1)">‹</button>
-    <button class="nav-button right" onclick="navigateCards(1)">›</button>
-
-    :::::::
+    <footer>
+        <p>&copy; 2024 Abraham Guo</p>
+    </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const cardStack = document.querySelector('.card-stack');
-        const cards = cardStack.querySelectorAll('.card');
         let currentIndex = 0;
 
-        window.navigateCards = function(direction) {
-            // Calculate the new index
+        function navigateCards(direction) {
+            const cardStack = document.getElementById('card-stack');
+            const totalCards = cardStack.children.length;
+
+            // Update the current index
             currentIndex += direction;
 
-            // Handle wrapping around
+            // Loop back to the beginning or end if out of bounds
             if (currentIndex < 0) {
-                currentIndex = cards.length - 1;
-            } else if (currentIndex >= cards.length) {
+                currentIndex = totalCards - 1;
+            } else if (currentIndex >= totalCards) {
                 currentIndex = 0;
             }
 
-            // Calculate the translate value
-            const translateValue = -currentIndex * 100;
-            cardStack.style.transform = `translateX(${translateValue}%)`;
-        };
-    });
+            // Calculate the offset and move the card stack
+            const offset = -currentIndex * 100; // 100% width for each card
+            cardStack.style.transform = `translateX(${offset}%)`;
+        }
     </script>
-    ::::}
-
-    © 2024 Abraham Guo
 </body>
 </html>
