@@ -76,10 +76,11 @@ footer {
 /* Card Container */
 .card-container {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 50px auto;
     max-width: 800px;
     overflow: hidden;
+    text-align: center;
 }
 
 /* Card Stack */
@@ -116,7 +117,7 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #5d90d4;
+    background: linear-gradient(135deg, #4878b0, #5d90d4);
     color: white;
     border: none;
     border-radius: 50%;
@@ -128,19 +129,21 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 10; /* Ensures buttons are above other elements */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 .nav-button.left {
-    left: -80px; /* Positioned outside the card container */
+    left: -70px; /* Positioned outside the card container */
 }
 
 .nav-button.right {
-    right: -80px; /* Positioned outside the card container */
+    right: -70px; /* Positioned outside the card container */
 }
 
 .nav-button:hover {
-    background-color: white;
+    background: white;
     color: #5d90d4;
     border: 2px solid #5d90d4;
+    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3);
 }
