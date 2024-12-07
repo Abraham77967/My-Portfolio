@@ -73,20 +73,18 @@ footer {
     margin-top: 20px;
 }
 
-/* Card Container Styling */
 /* Card Container */
 .card-container {
     position: relative;
     width: 80%;
     margin: 50px auto;
     max-width: 800px;
-    overflow: hidden; /* Keeps the focus on one card at a time */
+    overflow: hidden;
 }
 
 /* Card Stack */
 .card-stack {
     display: flex;
-    justify-content: center; /* Centers the cards */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -99,7 +97,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
-    margin: 0 10px; /* Adds spacing between cards */
+    margin: 0; /* No extra spacing between cards */
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -117,7 +115,7 @@ footer {
 /* Navigation Buttons */
 .nav-button {
     position: absolute;
-    top: 50%; /* Centers vertically relative to the container */
+    top: 50%; /* Center vertically within the container */
     transform: translateY(-50%);
     background-color: #5d90d4;
     color: white;
@@ -136,26 +134,14 @@ footer {
 }
 
 .nav-button.left {
-    left: -60px; /* Move left button slightly outside the container */
+    left: 10px; /* Move left button inside the container */
 }
 
 .nav-button.right {
-    right: -60px; /* Move right button slightly outside the container */
+    right: 10px; /* Move right button inside the container */
 }
 
 .nav-button:hover {
     background-color: #4878b0;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
-}
-
-
-
-/* Glow Animation */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 10px #5d90d4, 0 0 20px #5d90d4, 0 0 30px #5d90d4;
-    }
-    100% {
-        box-shadow: 0 0 15px #5d90d4, 0 0 30px #5d90d4, 0 0 45px #5d90d4;
-    }
 }
