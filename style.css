@@ -74,18 +74,19 @@ footer {
 }
 
 /* Card Container Styling */
+/* Card Container */
 .card-container {
     position: relative;
     width: 80%;
     margin: 50px auto;
     max-width: 800px;
-    overflow: visible; /* Allow buttons to remain visible */
+    overflow: hidden; /* Keeps the focus on one card at a time */
 }
 
-
-/* Card Stack Styling */
+/* Card Stack */
 .card-stack {
     display: flex;
+    justify-content: center; /* Centers the cards */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -98,6 +99,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
     text-align: center;
+    margin: 0 10px; /* Adds spacing between cards */
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -112,11 +114,10 @@ footer {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Buttons Styling */
 /* Navigation Buttons */
 .nav-button {
     position: absolute;
-    top: 50%; /* Center vertically within the container */
+    top: 50%; /* Centers vertically relative to the container */
     transform: translateY(-50%);
     background-color: #5d90d4;
     color: white;
@@ -130,22 +131,23 @@ footer {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease-in-out;
-    z-index: 10; /* Ensure buttons are above the cards */
+    z-index: 10; /* Keeps buttons above cards */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nav-button.left {
-    left: 10px; /* Adjust to position the button inside the container */
+    left: -60px; /* Move left button slightly outside the container */
 }
 
 .nav-button.right {
-    right: 10px; /* Adjust to position the button inside the container */
+    right: -60px; /* Move right button slightly outside the container */
 }
 
 .nav-button:hover {
     background-color: #4878b0;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 
 /* Glow Animation */
