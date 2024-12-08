@@ -112,6 +112,11 @@ footer {
     right: -60px;
 }
 
+/* Debugging Buttons */
+.nav-button {
+    background-color: red; /* Temporary color to ensure visibility */
+}
+
 /* Card Stack */
 .card-stack {
     display: flex;
@@ -128,9 +133,4 @@ footer {
     padding: 30px;
     text-align: center;
     color: #333;
-}
-
-.card h3 {
-    margin-bottom: 15px;
-    color: #5d90d4;
 }
