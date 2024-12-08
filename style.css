@@ -117,21 +117,30 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: linear-gradient(135deg, #4878b0, #5d90d4);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    background-color: transparent;
+    border: 3px solid #5d90d4;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     font-size: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 100; /* Ensures buttons are above other elements */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    z-index: 100;
+    color: #5d90d4;
+    text-shadow: 0 0 10px #5d90d4;
+    box-shadow: 0 0 20px #5d90d4, inset 0 0 10px #5d90d4;
+    transition: all 0.3s ease-in-out;
 }
+
+.nav-button:hover {
+    color: white;
+    background-color: #5d90d4;
+    box-shadow: 0 0 40px #5d90d4, inset 0 0 20px white;
+    border-color: white;
+}
+
 
 .nav-button.left {
     left: 10px; /* Adjusted position */
@@ -139,11 +148,4 @@ footer {
 
 .nav-button.right {
     right: 10px; /* Adjusted position */
-}
-
-.nav-button:hover {
-    background: white;
-    color: #5d90d4;
-    border: 2px solid #5d90d4;
-    box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3);
 }
