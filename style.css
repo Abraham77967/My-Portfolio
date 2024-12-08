@@ -68,11 +68,12 @@ body {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 300%;
 }
 
 /* Card */
 .card {
-    min-width: 100%;
+    flex: 0 0 100%;
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
