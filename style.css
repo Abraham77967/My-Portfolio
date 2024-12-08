@@ -75,11 +75,11 @@ footer {
 
 /* Card Container */
 .card-container {
-    position: relative;
+    position: relative; /* Ensure this is set */
     width: 90%;
     margin: 50px auto;
     max-width: 800px;
-    overflow: hidden;
+    overflow: visible; /* Ensure the buttons are not clipped */
     text-align: center;
 }
 
@@ -116,27 +116,33 @@ footer {
 /* Navigation Buttons */
 .nav-button {
     position: absolute;
-    top: 50%;
+    top: 50%; /* Center vertically relative to the card-container */
     transform: translateY(-50%);
-    background: red; /* Debug color */
+    background: linear-gradient(135deg, #4878b0, #5d90d4);
     color: white;
-    border: 2px solid #000;
-    border-radius: 50%;
+    border: none;
+    border-radius: 50%; /* Circular shape */
     width: 50px;
     height: 50px;
-    font-size: 24px;
     cursor: pointer;
-    z-index: 1000; /* Ensure visibility */
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensure visibility */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
+/* Position Left Button Outside */
 .nav-button.left {
-    left: 10px; /* Visible inside container */
+    left: -60px; /* Moves button outside the left edge of the card-container */
 }
 
+/* Position Right Button Outside */
 .nav-button.right {
-    right: 10px; /* Visible inside container */
+    right: -60px; /* Moves button outside the right edge of the card-container */
 }
-
 
 /* Hover Effect for Buttons */
 .nav-button:hover {
