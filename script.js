@@ -5,32 +5,31 @@ function navigate(direction) {
     const cards = document.querySelectorAll('.card');
     const totalCards = cards.length;
 
-    // Calculate the next index
-    const nextIndex = currentIndex + direction;
+    // Update index
+    currentIndex += direction;
 
-    // Handle looping logic
-    if (nextIndex < 0) {
-        // If going left from the first card, jump to the last card
+    // Smooth transition for normal navigation
+    if (currentIndex >= 0 && currentIndex < totalCards) {
+        const offset = -currentIndex * 100;
+        carousel.style.transition = 'transform 0.5s ease-in-out';
+        carousel.style.transform = `translateX(${offset}%)`;
+    } else if (currentIndex < 0) {
+        // Loop to last card
         currentIndex = totalCards - 1;
-        carousel.style.transition = 'none'; // Disable transition for instant jump
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        const offset = -currentIndex * 100;
+        carousel.style.transition = 'none';
+        carousel.style.transform = `translateX(${offset}%)`;
         setTimeout(() => {
-            // Restore transition for smooth movement
             carousel.style.transition = 'transform 0.5s ease-in-out';
         });
-    } else if (nextIndex >= totalCards) {
-        // If going right from the last card, jump to the first card
+    } else if (currentIndex >= totalCards) {
+        // Loop to first card
         currentIndex = 0;
-        carousel.style.transition = 'none'; // Disable transition for instant jump
-        carousel.style.transform = 'translateX(0%)';
+        const offset = 0;
+        carousel.style.transition = 'none';
+        carousel.style.transform = `translateX(${offset}%)`;
         setTimeout(() => {
-            // Restore transition for smooth movement
             carousel.style.transition = 'transform 0.5s ease-in-out';
         });
-    } else {
-        // Normal navigation
-        currentIndex = nextIndex;
-        carousel.style.transition = 'transform 0.5s ease-in-out'; // Ensure smooth transition
-        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 }
