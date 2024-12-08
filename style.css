@@ -75,18 +75,58 @@ footer {
 
 /* Card Container */
 .card-container {
-    position: relative; /* Ensure this is set */
+    position: relative; /* Ensure buttons are positioned relative to the container */
     width: 90%;
     margin: 50px auto;
     max-width: 800px;
-    overflow: visible; /* Ensure the buttons are not clipped */
+    overflow: hidden; /* Hides overflowing cards but keeps buttons visible */
     text-align: center;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%; /* Center vertically relative to the card-container */
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #4878b0, #5d90d4);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100; /* Ensures buttons are on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Position Left Button Outside */
+.nav-button.left {
+    left: -60px; /* Keeps the button outside the container */
+}
+
+/* Position Right Button Outside */
+.nav-button.right {
+    right: -60px; /* Keeps the button outside the container */
+}
+
+/* Hover Effect for Buttons */
+.nav-button:hover {
+    background: white;
+    color: #5d90d4;
+    border: 2px solid #5d90d4;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Card Stack */
 .card-stack {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Improves performance for animations */
 }
 
 /* Card Styling */
@@ -110,44 +150,4 @@ footer {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Navigation Buttons */
-/* Navigation Buttons */
-.nav-button {
-    position: absolute;
-    top: 50%; /* Center vertically relative to the card-container */
-    transform: translateY(-50%);
-    background: linear-gradient(135deg, #4878b0, #5d90d4);
-    color: white;
-    border: none;
-    border-radius: 50%; /* Circular shape */
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100; /* Ensure visibility */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-/* Position Left Button Outside */
-.nav-button.left {
-    left: -60px; /* Moves button outside the left edge of the card-container */
-}
-
-/* Position Right Button Outside */
-.nav-button.right {
-    right: -60px; /* Moves button outside the right edge of the card-container */
-}
-
-/* Hover Effect for Buttons */
-.nav-button:hover {
-    background: white;
-    color: #5d90d4;
-    border: 2px solid #5d90d4;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
 }
