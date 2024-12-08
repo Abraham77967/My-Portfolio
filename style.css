@@ -117,26 +117,29 @@ footer {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 70px;
-    height: 40px;
-    background: linear-gradient(to right, #5d90d4, #4878b0);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 18px;
+    background-color: transparent;
+    border: 3px solid #5d90d4;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 100;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -3px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    color: #5d90d4;
+    text-shadow: 0 0 10px #5d90d4;
+    box-shadow: 0 0 20px #5d90d4, inset 0 0 10px #5d90d4;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-button:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5), inset 0 -4px 8px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(to right, #4878b0, #5d90d4);
+    color: white;
+    background-color: #5d90d4;
+    box-shadow: 0 0 40px #5d90d4, inset 0 0 20px white;
+    border-color: white;
 }
-
 
 
 .nav-button.left {
