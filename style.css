@@ -25,29 +25,27 @@ header {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffd700; /* Gold color */
+    color: #f5d142; /* Softer, lighter gold */
     text-shadow: 
-        0 0 5px #ffd700, 
-        0 0 10px #ffd700, 
-        0 0 15px #ffbf00, 
-        0 0 20px #ffbf00, 
-        0 0 30px #ff8000, 
-        0 0 40px #ff8000; /* Layers of glow for a rich effect */
-    font-family: 'Brush Script MT', cursive; /* For a cursive style similar to your example */
+        0 0 5px #f5d142, 
+        0 0 10px #f5d142, 
+        0 0 15px #f6e58d, 
+        0 0 20px #f6e58d, 
+        0 0 30px #f8ecc2; /* Subtle layers for a classier glow */
+    font-family: 'Brush Script MT', cursive; /* Maintain elegant cursive style */
     letter-spacing: 2px;
-    transition: transform 0.3s, text-shadow 0.3s;
+    transition: transform 0.2s, text-shadow 0.2s ease-in-out;
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     text-shadow: 
-        0 0 10px #ffd700, 
-        0 0 20px #ffd700, 
-        0 0 30px #ffbf00, 
-        0 0 40px #ffbf00, 
-        0 0 50px #ff8000, 
-        0 0 60px #ff8000;
+        0 0 8px #f5d142, 
+        0 0 16px #f6e58d, 
+        0 0 24px #f8ecc2, 
+        0 0 32px #fff8e1; /* Slightly more intense on hover */
 }
+
 
 
 .nav-links {
