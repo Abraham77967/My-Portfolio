@@ -1,21 +1,28 @@
 let currentIndex = 0;
 
-function navigate(direction) {
+function showSlide(index) {
     const carousel = document.querySelector('.carousel');
-    const cards = document.querySelectorAll('.card');
-    const totalCards = cards.length;
+    const totalSlides = document.querySelectorAll('.carousel-item').length;
 
-    // Update the index
-    currentIndex += direction;
-
-    // Ensure the index stays within bounds
-    if (currentIndex < 0) {
-        currentIndex = totalCards - 1;
-    } else if (currentIndex >= totalCards) {
-        currentIndex = 0;
+    if (index < 0) {
+        currentIndex = totalSlides - 1; // Go to the last slide
+    } else if (index >= totalSlides) {
+        currentIndex = 0; // Go to the first slide
+    } else {
+        currentIndex = index;
     }
 
-    // Calculate the offset and apply the transformation
-    const offset = -currentIndex * 100;
+    const offset = -currentIndex * 100; // Adjust slide position
     carousel.style.transform = `translateX(${offset}%)`;
 }
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// Initialize the carousel
+showSlide(currentIndex);

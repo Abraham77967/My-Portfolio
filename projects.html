@@ -23,27 +23,22 @@
         <section class="projects-section">
             <h1>Projects</h1>
             <div class="carousel-container">
-                <!-- Left Button -->
-                <button class="carousel-button left" onclick="navigate(-1)">&#8249;</button>
-
-                <!-- Cards Wrapper -->
+                <button class="carousel-button left" onclick="prevSlide()">&#8249;</button>
                 <div class="carousel">
-                    <div class="card">
+                    <div class="carousel-item">
                         <h3>Project 1</h3>
                         <p>Description of the first project, highlighting its purpose and impact.</p>
                     </div>
-                    <div class="card">
+                    <div class="carousel-item">
                         <h3>Project 2</h3>
                         <p>Description of the second project, showcasing the tools and skills used.</p>
                     </div>
-                    <div class="card">
+                    <div class="carousel-item">
                         <h3>Project 3</h3>
                         <p>Details about the third project, emphasizing challenges and solutions.</p>
                     </div>
                 </div>
-
-                <!-- Right Button -->
-                <button class="carousel-button right" onclick="navigate(1)">&#8250;</button>
+                <button class="carousel-button right" onclick="nextSlide()">&#8250;</button>
             </div>
         </section>
     </main>
