@@ -25,8 +25,30 @@ header {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffdd57;
+    color: #ffd700; /* Gold color */
+    text-shadow: 
+        0 0 5px #ffd700, 
+        0 0 10px #ffd700, 
+        0 0 15px #ffbf00, 
+        0 0 20px #ffbf00, 
+        0 0 30px #ff8000, 
+        0 0 40px #ff8000; /* Layers of glow for a rich effect */
+    font-family: 'Brush Script MT', cursive; /* For a cursive style similar to your example */
+    letter-spacing: 2px;
+    transition: transform 0.3s, text-shadow 0.3s;
 }
+
+.logo:hover {
+    transform: scale(1.1);
+    text-shadow: 
+        0 0 10px #ffd700, 
+        0 0 20px #ffd700, 
+        0 0 30px #ffbf00, 
+        0 0 40px #ffbf00, 
+        0 0 50px #ff8000, 
+        0 0 60px #ff8000;
+}
+
 
 .nav-links {
     list-style: none;
