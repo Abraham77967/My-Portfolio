@@ -1,15 +1,16 @@
 /* General Styling */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #007BFF, #0056b3);
+    color: #ffffff;
 }
 
 header {
-    background-color: #007BFF;
-    color: white;
+    background-color: #002855; /* Darker royal blue */
+    color: #ffdd57; /* Gold */
     padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .navbar {
@@ -24,6 +25,7 @@ header {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
+    color: #ffdd57;
 }
 
 .nav-links {
@@ -38,14 +40,15 @@ header {
 }
 
 .nav-links a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1em;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.2s;
 }
 
 .nav-links a:hover {
     color: #ffdd57;
+    transform: scale(1.1);
 }
 
 main {
@@ -54,21 +57,20 @@ main {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 20px;
-    color: #333;
+    color: #ffdd57; /* Gold for headings */
 }
 
 /* Carousel Styling */
 .carousel-container {
     position: relative;
     width: 80%;
-    margin: 0 auto;
+    margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
-    padding: 20px 0;
 }
 
 .carousel {
@@ -80,24 +82,21 @@ h1 {
 .card {
     flex: 0 0 100%;
     text-align: center;
-    background-color: #fff;
+    background-color: #002855; /* Royal blue */
+    color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 0 10px;
+    margin: 10px;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
     margin: 10px 0;
-    color: #007BFF;
+    color: #ffdd57; /* Gold */
 }
 
 .card p {
-    color: #555;
+    color: #dddddd;
 }
 
 /* Carousel Buttons */
@@ -105,15 +104,15 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #007BFF;
-    color: white;
+    background-color: #ffdd57; /* Gold */
+    color: #002855; /* Royal blue text */
     border: none;
     border-radius: 50%;
     cursor: pointer;
     padding: 10px;
     width: 40px;
     height: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-size: 1.2em;
 }
 
@@ -126,17 +125,17 @@ h1 {
 }
 
 .carousel-button:hover {
-    background-color: #0056b3;
+    background-color: #ffc107; /* Lighter gold */
 }
 
 /* Footer */
 footer {
-    background-color: #007BFF;
-    color: white;
+    background-color: #002855; /* Royal blue */
+    color: #ffffff;
     padding: 10px 0;
     text-align: center;
     margin-top: 20px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
 
 footer p {
