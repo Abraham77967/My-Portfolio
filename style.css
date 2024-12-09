@@ -123,6 +123,7 @@ h1 {
     height: 40px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     font-size: 1.2em;
+    z-index: 10; /* Ensure buttons are on top */
 }
 
 .carousel-button.left {
