@@ -45,28 +45,25 @@ h1 {
 /* Carousel Styling */
 .carousel-container {
     position: relative;
-    width: 90%; /* Adjusted for better centering */
-    max-width: 800px; /* Limit max width */
+    width: 80%;
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
     background-color: #ffffff;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: calc(300%); /* Matches number of cards */
 }
 
 .card {
-    flex: 0 0 100%; /* Ensure one card is visible at a time */
+    flex: 0 0 33.33%;
     text-align: center;
     background-color: #002855;
     color: #ffffff;
     border-radius: 10px;
-    margin: 0; /* Remove extra margins */
+    margin: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -98,11 +95,11 @@ h1 {
 }
 
 .carousel-button.left {
-    left: -20px; /* Pull buttons closer to the cards */
+    left: 10px;
 }
 
 .carousel-button.right {
-    right: -20px; /* Pull buttons closer to the cards */
+    right: 10px;
 }
 
 .carousel-button:hover {
