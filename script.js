@@ -15,7 +15,7 @@ function navigate(direction) {
         currentIndex = 0;
     }
 
-    // Calculate the offset and apply the transformation
+    // Calculate the offset (100% for single-card display)
     const offset = -currentIndex * 100;
     carousel.style.transform = `translateX(${offset}%)`;
 }
