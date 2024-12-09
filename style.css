@@ -62,12 +62,12 @@ h1 {
 .carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    overflow: hidden; /* Ensure no overflow during slide */
+    width: 300%; /* Matches the number of items (3 items = 300%) */
     background-color: #002855; /* Match the card background */
 }
 
 .carousel-item {
-    flex: 0 0 100%; /* Each item takes full width */
+    flex: 0 0 33.33%; /* Each item takes one-third of the container width */
     text-align: center;
     padding: 20px;
     color: #ffffff;

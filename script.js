@@ -4,6 +4,7 @@ function showSlide(index) {
     const carousel = document.querySelector('.carousel');
     const totalSlides = document.querySelectorAll('.carousel-item').length;
 
+    // Handle looping
     if (index < 0) {
         currentIndex = totalSlides - 1; // Go to the last slide
     } else if (index >= totalSlides) {
@@ -12,7 +13,8 @@ function showSlide(index) {
         currentIndex = index;
     }
 
-    const offset = -currentIndex * 100; // Adjust slide position
+    // Move the carousel to the correct position
+    const offset = -currentIndex * 100 / totalSlides; // Divide by totalSlides to handle flex widths
     carousel.style.transform = `translateX(${offset}%)`;
 }
 
