@@ -67,15 +67,18 @@ h1 {
 }
 
 .project-box {
-    width: 100%; /* Full width of the container */
-    padding: 30px;
+    width: 100%;
+    padding: 20px;
     background: #accbe1; /* Light navy */
     border-radius: 15px;
-    text-align: center;
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center;
+    justify-content: space-between;
     color: #ffffff;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     border: 2px solid #d4af37; /* Gold border */
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    gap: 20px; /* Space between text and image */
 }
 
 .project-box h3 {
@@ -83,7 +86,7 @@ h1 {
     background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .project-box p {
@@ -98,11 +101,14 @@ h1 {
     background: #eef2f3; /* Slightly lighter navy */
 }
 
+.project-content {
+    flex: 1; /* Allow text to take up available space */
+}
+
 .project-image {
-    max-width: 100%;
+    max-width: 25%; /* Make the image smaller */
     height: auto;
     border-radius: 10px;
-    margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
