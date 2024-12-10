@@ -113,3 +113,32 @@ footer {
     padding: 10px 0;
     text-align: center;
 }
+
+.project-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project-box {
+    width: 30%;
+    padding: 20px;
+    background: #002855;
+    border-radius: 15px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.project-box h3 {
+    color: #ffdd57;
+    margin-bottom: 10px;
+}
+
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    background: #0056b3;
+}
