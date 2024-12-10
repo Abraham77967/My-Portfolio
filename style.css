@@ -37,6 +37,9 @@ header {
     color: #d4af37; /* Gold */
     text-decoration: none;
     font-size: 1.2em;
+    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: color 0.3s;
 }
 
@@ -92,7 +95,9 @@ h1 {
 .project-box p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #ffffff;
+    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project-box:hover {
