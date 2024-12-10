@@ -8,13 +8,13 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #007BFF, #0056b3);
+    background: linear-gradient(120deg, #eef2f3, #accbe1); /* Light navy blue gradient */
     color: #ffffff;
 }
 
 header {
-    background-color: #002855;
-    color: #ffdd57;
+    background-color: #accbe1; /* Light navy blue */
+    color: #d4af37; /* Gold */
     padding: 20px;
     text-align: center;
 }
@@ -26,128 +26,76 @@ header {
 }
 
 .logo {
-    font-size: 2em;
-    color: #ffdd57;
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #d4af37; /* Gold */
     text-decoration: none;
     font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f1c40f; /* Brighter gold */
 }
 
 main {
     text-align: center;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 h1 {
-    font-size: 2.5em;
-    color: #ffdd57;
-    margin-bottom: 20px;
+    font-size: 2.8em;
+    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Reflective gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
 }
 
-/* Carousel Styling */
-.carousel-container {
-    position: relative;
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden; /* Prevent overflow issues */
-    background: #002855; /* Match the card background */
-    border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 300%; /* Matches the number of items (3 items = 300%) */
-    background-color: #002855; /* Match the card background */
-}
-
-.carousel-item {
-    flex: 0 0 33.33%; /* Each item takes one-third of the container width */
-    text-align: center;
-    padding: 20px;
-    color: #ffffff;
-    border-radius: 10px;
-}
-
-.carousel-item h3 {
-    margin-bottom: 10px;
-    color: #ffdd57;
-}
-
-/* Buttons */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #ffdd57;
-    color: #002855;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    z-index: 10;
-}
-
-.carousel-button.left {
-    left: 10px;
-}
-
-.carousel-button.right {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: #ffc107;
-}
-
-/* Footer */
-footer {
-    background-color: #002855;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-}
 .project-boxes {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     margin: 40px auto;
-    max-width: 70%; /* Restrict width for better readability */
+    max-width: 80%;
 }
 
 .project-box {
     width: 100%; /* Full width of the container */
     padding: 30px;
-    background: #002855;
+    background: #accbe1; /* Light navy */
     border-radius: 15px;
     text-align: center;
     color: #ffffff;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #d4af37; /* Gold border */
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .project-box h3 {
     font-size: 1.8em;
-    color: #ffdd57;
+    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 15px;
 }
 
 .project-box p {
     font-size: 1.2em;
     line-height: 1.6;
+    color: #ffffff;
 }
 
 .project-box:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    background: #0056b3;
+    background: #eef2f3; /* Slightly lighter navy */
 }
 
 .project-image {
@@ -156,4 +104,13 @@ footer {
     border-radius: 10px;
     margin-bottom: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #accbe1; /* Light navy blue */
+    color: #d4af37; /* Gold */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.1em;
 }
