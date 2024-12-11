@@ -12,17 +12,17 @@ body {
     color: #ffffff;
 }
 
+/* Header Styling */
 header {
     background-color: #accbe1; /* Light navy blue */
-    color: #d4af37; /* Gold */
     padding: 20px;
-    text-align: center;
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .logo {
@@ -34,21 +34,53 @@ header {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
 .nav-links a {
     color: #d4af37; /* Gold */
     text-decoration: none;
     font-size: 1.2em;
-    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    transition: color 0.3s;
+    padding: 10px 15px;
+    position: relative;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Glowing Hover Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background: linear-gradient(45deg, transparent, #f1c40f, transparent);
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    transition: all 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #f1c40f; /* Brighter gold */
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.5);
 }
 
+.nav-links a:hover::after {
+    border-color: #f1c40f;
+    opacity: 1;
+}
+
+/* Main Content */
 main {
     text-align: center;
     padding: 40px 20px;
@@ -63,6 +95,7 @@ h1 {
     margin-bottom: 30px;
 }
 
+/* Project Section */
 .project-boxes {
     display: flex;
     flex-direction: column;
@@ -77,57 +110,39 @@ h1 {
     padding: 20px;
     background: #accbe1; /* Light navy */
     border-radius: 15px;
-    display: flex; /* Use flexbox for horizontal alignment */
+    display: flex;
     align-items: center;
     justify-content: space-between;
     color: #ffffff;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     border: 2px solid #d4af37; /* Gold border */
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    gap: 20px; /* Space between text and image */
-}
-
-.project-box h3 {
-    font-size: 1.8em;
-    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
-}
-
-.project-box p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    gap: 20px;
 }
 
 .project-box:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    background: #eef2f3; /* Slightly lighter navy */
+    background: #eef2f3;
 }
 
 .project-content {
-    flex: 1; /* Allow text to take up available space */
+    flex: 1;
 }
 
 .project-image {
-    max-width: 20%; /* Smaller image size */
+    max-width: 20%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    object-fit: contain; /* Ensures the image scales well */
-    border: 2px solid #d4af37; /* Add a gold border around images */
+    object-fit: contain;
+    border: 2px solid #d4af37;
 }
 
 /* Footer */
 footer {
-    background-color: #accbe1; /* Light navy blue */
-    color: #d4af37; /* Gold */
+    background-color: #accbe1;
+    color: #d4af37;
     padding: 10px 0;
     text-align: center;
     font-size: 1.1em;
