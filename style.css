@@ -16,50 +16,69 @@ body {
 header {
     background-color: #accbe1; /* Light navy blue */
     color: #ffffff; /* White text */
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 
-.logo {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #d4af37; /* Gold for logo */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-
+/* Navbar Styling */
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: center; /* Center the nav links horizontally */
+    align-items: center; /* Vertically align items */
+    gap: 40px; /* Space between each link */
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; /* Align horizontally */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0; /* Ensure no extra spacing around items */
 }
 
 .nav-links a {
     color: #ffffff; /* White text for links */
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
     font-size: 1.2em;
+    font-weight: bold;
     transition: color 0.3s;
+    padding: 10px 20px; /* Add padding for button-like appearance */
+    border-radius: 5px; /* Rounded corners */
 }
 
 .nav-links a:hover {
-    color: #d4af37; /* Gold highlight on hover */
+    background-color: #d4af37; /* Gold background on hover */
+    color: #333333; /* Dark text on hover */
 }
 
-/* Main Section */
+/* Glowing Animation for Titles */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #d4af37, 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #f1c40f, 0 0 40px #f1c40f, 0 0 50px #f1c40f, 0 0 75px #f1c40f;
+    }
+    50% {
+        text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f, 0 0 40px #d4af37, 0 0 50px #d4af37, 0 0 75px #d4af37;
+    }
+    100% {
+        text-shadow: 0 0 5px #d4af37, 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #f1c40f, 0 0 40px #f1c40f, 0 0 50px #f1c40f, 0 0 75px #f1c40f;
+    }
+}
+
+h1, h3 {
+    font-size: 2.8em;
+    color: #d4af37; /* Gold color */
+    margin-bottom: 30px;
+    animation: glow 2s infinite; /* Glowing animation */
+}
+
+/* Main Content */
 main {
     text-align: center;
     padding: 40px 20px;
-}
-
-h1 {
-    font-size: 2.8em;
-    color: #d4af37; /* Gold for headers */
-    margin-bottom: 30px;
-}
-
-h3 {
-    font-size: 1.8em;
-    color: #ffffff; /* White for subheaders */
-    margin-bottom: 20px;
 }
 
 p {
@@ -123,25 +142,4 @@ footer {
     padding: 10px 0;
     text-align: center;
     font-size: 1.1em;
-}
-
-/* Glowing Animation */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #d4af37, 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #f1c40f, 0 0 40px #f1c40f, 0 0 50px #f1c40f, 0 0 75px #f1c40f;
-    }
-    50% {
-        text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f, 0 0 40px #d4af37, 0 0 50px #d4af37, 0 0 75px #d4af37;
-    }
-    100% {
-        text-shadow: 0 0 5px #d4af37, 0 0 10px #d4af37, 0 0 20px #d4af37, 0 0 30px #f1c40f, 0 0 40px #f1c40f, 0 0 50px #f1c40f, 0 0 75px #f1c40f;
-    }
-}
-
-/* Apply Glow Animation to Titles */
-h1, h3 {
-    font-size: 2.8em;
-    color: #d4af37; /* Gold color */
-    margin-bottom: 30px;
-    animation: glow 2s infinite; /* Glowing animation */
 }
