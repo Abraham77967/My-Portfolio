@@ -5,94 +5,79 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Ensure the body takes up the full height */
+}
+
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack header, main, and footer vertically */
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #eef2f3, #accbe1); /* Light navy blue gradient */
-    color: #ffffff;
+    background: #F8FAF8;
+    color: #2E3E52; /* Dark navy for text */
 }
 
 /* Header Styling */
 header {
-    background-color: #accbe1; /* Light navy blue */
+    background-color: #ACCCBA; /* Muted green */
     padding: 20px;
+    text-align: center; /* Center align logo and links */
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack logo and links vertically */
     align-items: center;
-    padding: 0 20px;
+    gap: 10px; /* Space between logo and links */
 }
 
 .logo {
     font-size: 2.5em;
     font-weight: bold;
-    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    color: #3B5453; /* Slate gray */
 }
 
-/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Space between links */
 }
 
 .nav-links a {
-    color: #d4af37; /* Gold */
+    color: #67978F; /* Teal */
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 15px;
-    position: relative;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-/* Glowing Hover Effect */
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid transparent;
-    border-radius: 5px;
-    background: linear-gradient(45deg, transparent, #f1c40f, transparent);
-    -webkit-mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: destination-out;
-    mask-composite: exclude;
-    transition: all 0.3s ease;
+.nav-links a.active {
+    background-color: #3B5453; /* Slate gray */
+    color: #F8FAF8; /* Light background */
 }
 
 .nav-links a:hover {
-    color: #f1c40f; /* Brighter gold */
-    box-shadow: 0 0 15px rgba(241, 196, 15, 0.5);
-}
-
-.nav-links a:hover::after {
-    border-color: #f1c40f;
-    opacity: 1;
+    background-color: #3B5453; /* Slate gray */
+    color: #F8FAF8; /* Light text */
 }
 
 /* Main Content */
 main {
+    flex: 1; /* Push the footer to the bottom when content is minimal */
     text-align: center;
     padding: 40px 20px;
 }
 
 h1 {
     font-size: 2.8em;
-    background: linear-gradient(45deg, #d4af37, #f1c40f, #d4af37); /* Reflective gold gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    color: #2E3E52; /* Dark navy */
     margin-bottom: 30px;
+}
+
+h3, p {
+    color: #3B5453; /* Slate gray */
 }
 
 /* Project Section */
@@ -105,25 +90,36 @@ h1 {
     max-width: 80%;
 }
 
+/* Default Card Styling (with hover zoom) */
 .project-box {
     width: 100%;
     padding: 20px;
-    background: #accbe1; /* Light navy */
+    background: #F8FAF8; /* Light background */
     border-radius: 15px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    color: #ffffff;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    border: 2px solid #d4af37; /* Gold border */
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    color: #2E3E52; /* Dark navy */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border: 2px solid #ACCCBA; /* Muted green border */
     gap: 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth scaling and shadow */
 }
 
 .project-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    background: #eef2f3;
+    transform: scale(1.05); /* Zoom on hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+}
+
+/* No Hover Zoom for Active Projects */
+.project-box.no-hover {
+    transition: none; /* Disable transitions */
+}
+
+.project-box.no-hover:hover {
+    transform: none; /* No scaling */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Keep shadow unchanged */
+    cursor: default; /* Normal cursor */
 }
 
 .project-content {
@@ -136,14 +132,59 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     object-fit: contain;
-    border: 2px solid #d4af37;
+    border: 2px solid #ACCCBA;
 }
 
 /* Footer */
 footer {
-    background-color: #accbe1;
-    color: #d4af37;
+    background-color: #3B5453; /* Slate gray */
+    color: #F8FAF8; /* Light text */
     padding: 10px 0;
     text-align: center;
     font-size: 1.1em;
+    margin-top: auto; /* Ensure footer stays at the bottom */
+}
+
+footer a {
+    color: #F8FAF8; /* Light text for footer */
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ACCCBA; /* Muted green on hover */
+}
+
+footer img {
+    vertical-align: middle; /* Align icon with text */
+    margin-right: 5px; /* Add spacing between icon and text */
+}
+
+/* Video Container with Glowing Animation */
+.video-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px; /* Space between the video and glow */
+    border-radius: 15px; /* Rounded edges */
+    animation: glow 1.5s infinite; /* Glowing animation */
+    box-shadow: 0 0 15px rgba(103, 151, 143, 0.8); /* Initial glow */
+}
+
+.video-container iframe {
+    border-radius: 10px; /* Ensure video itself has rounded edges */
+    border: none;
+}
+
+/* Keyframes for Glowing Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px rgba(103, 151, 143, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(103, 151, 143, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(103, 151, 143, 0.8);
+    }
 }
