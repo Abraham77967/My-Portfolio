@@ -36,6 +36,7 @@ header {
     font-size: 2.5em;
     font-weight: bold;
     color: #3B5453; /* Slate gray */
+    font-family: 'SPACE FUTURE', sans-serif; /* Apply Valorant font */
 }
 
 .nav-links {
@@ -45,6 +46,7 @@ header {
 }
 
 .nav-links a {
+    font-family: 'SpaceFuture', sans-serif;
     color: #67978F; /* Teal */
     text-decoration: none;
     font-size: 1.2em;
@@ -187,4 +189,32 @@ footer img {
     100% {
         box-shadow: 0 0 15px rgba(103, 151, 143, 0.8);
     }
+}
+
+
+@font-face {
+    font-family: 'SpaceFuture';
+    src: url('./fonts/SPACE FUTURE.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'SpaceFutureBoldItalic';
+    src: url('./fonts/SPACE FUTURE-BoldItalic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Fino';
+    src: url('./fonts/Fino.ttf') format('truetype');
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3B5453; /* Slate gray */
+    font-family: 'SpaceFutureBoldItalic', sans-serif;
+}
+
+h1, h3 {
+    font-family: 'Fino', serif;
+    color: #2E3E52; /* Dark navy */
 }
