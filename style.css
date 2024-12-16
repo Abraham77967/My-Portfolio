@@ -20,23 +20,30 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #ACCCBA; /* Muted green */
-    padding: 20px;
+    background-color: #2E3E52; /* Dark navy */
+    padding: 40px;
     text-align: center; /* Center align logo and links */
+    border: 2px solid red; /* Debugging only */
 }
 
 .navbar {
     display: flex;
     flex-direction: column; /* Stack logo and links vertically */
     align-items: center;
-    gap: 10px; /* Space between logo and links */
+    gap: 30px; /* Space between logo and links */
 }
 
 .logo {
     font-size: 2.5em;
     font-weight: bold;
-    color: #3B5453; /* Slate gray */
+    color: #fff; /* White for better contrast */
     font-family: 'SPACE FUTURE', sans-serif; /* Apply Valorant font */
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 .nav-links {
@@ -47,7 +54,7 @@ header {
 
 .nav-links a {
     font-family: 'SpaceFuture', sans-serif;
-    color: #67978F; /* Teal */
+    color: #F8FAF8; /* Light text */
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 15px;
@@ -56,12 +63,12 @@ header {
 }
 
 .nav-links a.active {
-    background-color: #3B5453; /* Slate gray */
+    background-color: #4A6C7C; /* Muted teal */
     color: #F8FAF8; /* Light background */
 }
 
 .nav-links a:hover {
-    background-color: #3B5453; /* Slate gray */
+    background-color: #1A1F26; /* Darker shade for hover */
     color: #F8FAF8; /* Light text */
 }
 
@@ -163,13 +170,12 @@ footer img {
     margin-right: 5px; /* Add spacing between icon and text */
 }
 
-/* Video Container with Glowing Animation */
+/* Video Container */
 .video-container {
     position: relative;
     display: inline-block;
     padding: 10px; /* Space between the video and glow */
     border-radius: 15px; /* Rounded edges */
-    animation: glow 1.5s infinite; /* Glowing animation */
     box-shadow: 0 0 15px rgba(103, 151, 143, 0.8); /* Initial glow */
 }
 
@@ -177,20 +183,6 @@ footer img {
     border-radius: 10px; /* Ensure video itself has rounded edges */
     border: none;
 }
-
-/* Keyframes for Glowing Animation */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 15px rgba(103, 151, 143, 0.8);
-    }
-    50% {
-        box-shadow: 0 0 30px rgba(103, 151, 143, 0.5);
-    }
-    100% {
-        box-shadow: 0 0 15px rgba(103, 151, 143, 0.8);
-    }
-}
-
 
 @font-face {
     font-family: 'SpaceFuture';
@@ -217,4 +209,31 @@ footer img {
 h1, h3 {
     font-family: 'Fino', serif;
     color: #2E3E52; /* Dark navy */
+}
+
+.glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #428bff, 0 0 20px #428bff, 0 0 30px #428bff, 0 0 40px #63ffe0, 0 0 50px #63ffe0, 0 0 60px #63ffe0, 0 0 70px #7aff9e;
+  }
+  to {
+    text-shadow: 0 0 20px #63ffe0, 0 0 30px #63ffe0, 0 0 40px #7aff9e, 0 0 50px #7aff9e, 0 0 60px #428bff, 0 0 70px #428bff, 0 0 80px #428bff;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #428bff, 0 0 20px #428bff, 0 0 30px #428bff, 0 0 40px #63ffe0, 0 0 50px #63ffe0, 0 0 60px #63ffe0, 0 0 70px #7aff9e;
+  }
+  to {
+    text-shadow: 0 0 20px #63ffe0, 0 0 30px #63ffe0, 0 0 40px #7aff9e, 0 0 50px #7aff9e, 0 0 60px #428bff, 0 0 70px #428bff, 0 0 80px #428bff;
+  }
 }
