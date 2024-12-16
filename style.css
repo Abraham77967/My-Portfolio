@@ -23,7 +23,6 @@ header {
     background-color: #2E3E52; /* Dark navy */
     padding: 40px;
     text-align: center; /* Center align logo and links */
-    border: 2px solid red; /* Debugging only */
 }
 
 .navbar {
@@ -71,6 +70,152 @@ header {
     background-color: #1A1F26; /* Darker shade for hover */
     color: #F8FAF8; /* Light text */
 }
+/* Horizontally center content only on index.html */
+.index-main {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    text-align: center; /* Center-align text */
+    width: 100%;
+}
+
+.index-main .section {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Auto-center section content */
+}
+
+/* Spacing for the active projects page */
+
+/* Ensure consistent spacing around the main content */
+.projects-section {
+    padding: 40px 20px; /* Space around the section */
+    max-width: 1000px; /* Keep content at a readable width */
+    margin: 0 auto; /* Center section horizontally */
+}
+
+/* Style for project boxes */
+.project-box {
+    display: flex;
+    flex-direction: column; /* Stack content and video vertically */
+    gap: 30px; /* Add spacing between content and video */
+    background-color: #F8FAF8; /* Light background for contrast */
+    border: 1px solid #ACCCBA; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Internal spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px; /* Space between project boxes */
+}
+
+/* Project content spacing */
+.project-content p {
+    margin-bottom: 15px; /* Spacing between paragraphs */
+    line-height: 1.6; /* Improve text readability */
+}
+
+/* Video container styling */
+.project-video {
+    text-align: center; /* Center-align video */
+}
+
+.video-container {
+    margin: 0 auto; /* Center the video container */
+    max-width: 640px; /* Limit video width */
+    padding: 10px; /* Add space around video */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Footer spacing */
+footer {
+    margin-top: 40px; /* Add spacing above the footer */
+    padding: 20px 10px; /* Internal spacing */
+    text-align: center; /* Center-align footer content */
+}
+/* Spacing for the active projects page */
+
+/* Ensure consistent spacing around the main content */
+.projects-section {
+    padding: 40px 20px; /* Space around the section */
+    max-width: 1000px; /* Keep content at a readable width */
+    margin: 0 auto; /* Center section horizontally */
+}
+
+/* Style for project boxes */
+.project-box {
+    display: flex;
+    flex-direction: column; /* Stack content and video vertically */
+    gap: 30px; /* Add spacing between content and video */
+    background-color: #F8FAF8; /* Light background for contrast */
+    border: 1px solid #ACCCBA; /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Internal spacing */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px; /* Space between project boxes */
+}
+
+/* Project content spacing */
+.project-content p {
+    margin-bottom: 15px; /* Spacing between paragraphs */
+    line-height: 1.6; /* Improve text readability */
+}
+
+/* Video container styling */
+.project-video {
+    text-align: center; /* Center-align video */
+}
+
+.video-container {
+    margin: 0 auto; /* Center the video container */
+    max-width: 640px; /* Limit video width */
+    padding: 10px; /* Add space around video */
+    border-radius: 10px; /* Rounded edges */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+/* Footer spacing */
+footer {
+    margin-top: 40px; /* Add spacing above the footer */
+    padding: 20px 10px; /* Internal spacing */
+    text-align: center; /* Center-align footer content */
+}
+/* Project Video Heading */
+.project-video h3 {
+    font-size: 1.5em; /* Increase font size */
+    margin-bottom: 15px; /* Add space below the heading */
+    color: #2E3E52; /* Ensure consistency with other headings */
+    text-align: center; /* Center-align the text */
+}
+
+/* Video Container */
+.video-container {
+    margin: 0 auto; /* Center the video */
+    margin-bottom: 20px; /* Add space below the video */
+    max-width: 640px; /* Limit video width */
+    padding: 10px; /* Add space around the video */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
+}
+/* Set Josefin Sans as the default font for all general text */
+body, p, li, span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.1em; /* Improve readability */
+    line-height: 1.7; /* Add spacing between lines */
+    color: #3B5453; /* Neutral, consistent text color */
+}
+
+/* Ensure headings keep their existing fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: inherit; /* Keeps current styles for headings */
+    margin-bottom: 10px; /* Spacing below headings */
+}
+/* Center the main heading */
+.section h1 {
+    text-align: center; /* Center-align the text */
+    font-size: 2.5em; /* Optional: Make the heading larger */
+    margin-top: 20px; /* Optional: Add space above */
+    margin-bottom: 20px; /* Add space below */
+    color: #2E3E52; /* Optional: Consistent dark color */
+}
+
 
 /* Main Content */
 main {
@@ -97,6 +242,75 @@ h3, p {
     gap: 30px;
     margin: 40px auto;
     max-width: 80%;
+}
+/* Add spacing for internship details */
+.internship-details {
+    text-align: left; /* Align content to the left */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center content on the page */
+    line-height: 1.6; /* Improve line spacing */
+    font-size: 1.1em; /* Slightly larger text for better readability */
+}
+
+.internship-details h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px; /* Space below heading */
+    color: #2E3E52; /* Consistent color */
+}
+
+.internship-details p {
+    margin-bottom: 15px; /* Add spacing between paragraphs */
+}
+
+.internship-details ul {
+    margin: 15px 0; /* Add spacing around the list */
+    padding-left: 20px; /* Indent list */
+}
+
+.internship-details li {
+    margin-bottom: 10px; /* Space between list items */
+}
+/* Education Section Styling */
+.section {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 20px; /* Add padding around the section */
+    text-align: left; /* Align text to the left */
+    line-height: 1.6; /* Improve line spacing */
+}
+
+.section h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px; /* Space below main heading */
+    color: #2E3E52;
+}
+
+.section h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px; /* Space below subheading */
+    color: #3B5453;
+}
+
+.education-details {
+    margin: 20px 0; /* Add spacing above and below the list */
+    padding-left: 20px; /* Indent the list */
+    font-size: 1.1em;
+    color: #3B5453;
+}
+
+.education-details li {
+    margin-bottom: 15px; /* Space between each list item */
+}
+
+.education-details ul {
+    margin-top: 10px; /* Add space above nested lists */
+    padding-left: 20px; /* Indent nested lists */
+}
+
+p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    font-size: 1.1em;
+    color: #3B5453;
 }
 
 /* Default Card Styling (with hover zoom) */
